@@ -154,46 +154,126 @@ h1 {
     font-size: 1.3rem;
 }
 
+
+/* -----------Rating Container------------------ */
+
 .rating-container {
     flex-basis: 50%;
     color: var(--veryDarkMagenta);
-    outline: 1px solid red;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rating-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background-color: var(--lightGrayishMagenta);
+    color: var(--veryDarkMagenta);
+    font-size: 1.1rem;
+    padding: 0.8em 2em 0.8em 1em;
+    margin: 0.5em 0;
+    border-radius: 10px;
+    text-align: center;
+    line-break: normal;
+    white-space: nowrap;
+
 }
 
-.rating-section {
-    background-color: var(--lightGrayishMagenta);
-    display: flex;
+.rating-section:nth-child(1) {
+    align-self: start   ;
+
 }
+
+.rating-section:nth-child(2) {
+    align-self: center;
+}
+.rating-section:nth-child(3) {
+    align-self: end;
+}
+
 .rating-stars {
-    flex-basis: 50%;
-    background-image: url(assets/icon-star.svg);
-    background-repeat: repeat no-repeat;
-    background-position: center;
-    padding: 0 7em;
+    font-size: 1.5rem;
+    position: relative;
+    font-family: Times;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.rating-stars:after {
+    content: "★★★★★";
+    position: absolute;
+    color: orange;
+    letter-spacing: 3px;
+}
+
 .rating-user {
-    flex-basis: 50%;
+    font-weight: 700;
 }
+
+/* --------AVALIATIONS----- */
+
+
+
 
 .avaliations-container {
     display: flex;
     justify-content: center;
+    align-items: start;
     column-gap: 2em;
     color: var(--white);
-
 }
 .avaliation-section {
+    flex-basis: 33.33%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em 0;
     background-color: var(--veryDarkMagenta);
-    flex-basis: 29%;
-    padding: 4em 2em;
-    border-radius: 5%;
+    padding: 3em 2.1em;
+    border-radius: 10px;
+}
+.avaliation-section:nth-child(1) {
+    position: relative;
+    bottom: 1.4em;
+}
+.avaliation-section:nth-child(3) {
+    position: relative;
+    top: 1.4em;
+}
+
+.icon-container {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 
 }
 
 .icon {
-    display: inline;
     border-radius: 50%;
+    padding: 10%;
 }
 .user-info {
-    display: inline-block;
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+}
+
+.user-name {
+    font-weight: 700;
+}
+.user-status {
+    color: var(--softPink);
+}
+
+.user-message-container {
+}
+
+
+* {
+    /* outline: 1px solid red; */
 }
